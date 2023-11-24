@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bishal Currency Converter</title> <!-- title -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="./icon.png">
+
+  <!--  importing Montserrat from the google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section>
+    <div class="outer--div">
+
+      <!-- at the top head info section starts here -->
+      <div class="info-div">
+        <h1 class="header-title">US Dollar to Canadian Dollar<span class="banner--dot">.</span></h1>
+        <p class="header-sub-title">Convert <strong>USD</strong> to <strong>CAD</strong> at the real exchange rate</p>
+      </div>
+      <!-- the topmost info section ends here -->
+
+      <!-- currency container binding 2 currencies -->
+      <div class="currency--component">
+
+        <!-- USD currency label and input section -->
+        <div>
+          <div class="currency--wrapper">
+            <div class="currency-input-control">
+              <label for="USCurrency">Amount</label>
+              <input id="USCurrency" type="number" onchange="inputChanged('USD')" onkeyup="inputChanged('USD')"
+                onfocus="inputChanged('USD')" />
+            </div>
+            <div class="currency-input-label">
+              USA &nbsp;USD
+            </div>
+          </div>
+          <p class="error" id="USDError"></p>
+        </div>
+        <!-- usd currency part ends over -->
+
+        <!-- the arrow at the between -->
+        <div class="icon-wrapper">
+          <img src="icon.png" alt="arrow icon" class="icon">
+        </div>
+        <!-- arrow icon -->
+
+        <!-- cad currency part labeling and input -->
+        <div class="currency--wrapper">
+          <div class="currency-input-control">
+            <label for="CADCurrency">Convert To</label>
+            <input id="CADCurrency" type="number" onchange="inputChanged('CAD')" onkeyup="inputChanged('CAD')"
+              onfocus="inputChanged('CAD')" />
+          </div>
+          <div class="currency-input-label">
+            CA &nbsp; CAD
+          </div>
+          <p class="error" id="CADError"></p>
+        </div>
+        <!-- cad currency part ending here -->
+      </div>
+      <!-- as a whole currency ends here -->
+
+    </div>
+    <!-- section wrap ends over here -->
+
+    <!-- button onclick to convert -->
+    <div class="convert">
+      <div></div>
+      <div></div>
+      <div style="text-align: end;"><button class="btn" id="ButtonToConvert"
+          onclick="onButtonToConvertClick()">Convert</button></div>
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
